@@ -35,10 +35,10 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 <hr>
 <h2>1. Nguyên tắc cốt lõi: Bảo vệ dữ liệu cá nhân (Data Privacy by Design)</h2>
 <ul><li><strong>Lưu trữ cục bộ ưu tiên (Local-first):</strong> Toàn bộ thông tin cá nhân (họ tên cặp đôi, ngày bắt đầu yêu, ngày cưới, ảnh kỷ niệm, danh sách khách mời, sổ mừng, số tài khoản ngân hàng nhận mừng cưới, việc cần làm, ghi chú) đều được lưu trữ trực tiếp trong bộ nhớ riêng của ứng dụng trên thiết bị (cơ sở dữ liệu Room/SQLite nội bộ). Số tài khoản nhận mừng chỉ dùng để ứng dụng tự tạo mã ảnh VietQR tĩnh tại bàn lễ tân hoặc đính kèm lời mời; MyDay tuyệt đối không kết nối với bất kỳ ngân hàng hay cổng thanh toán nào.
-</li><li><strong>Không máy chủ theo dõi (No Backend, No Tracking):</strong> Nhà phát triển không vận hành bất kỳ máy chủ lưu trữ dữ liệu người dùng nào, không sử dụng dịch vụ phân tích hành vi (Analytics) hay các thư viện theo dõi của bên thứ ba (Tracking SDKs). Ngoại lệ duy nhất là trình quét mã QR do Google Play services cung cấp, có thể gửi dữ liệu chẩn đoán cho Google (xem Mục 3).
+</li><li><strong>Không máy chủ riêng, không gửi nội dung của bạn:</strong> Nhà phát triển không vận hành máy chủ lưu trữ dữ liệu người dùng. Tên, ảnh, kỷ niệm, danh sách khách, sổ mừng và số tài khoản không bao giờ rời khỏi máy, trừ khi bạn tự chia sẻ hoặc tự sao lưu. MyDay chỉ gửi ra ngoài hai loại thông tin kỹ thuật qua Google Firebase: báo cáo lỗi (bật sẵn, tắt được) và thống kê sử dụng ẩn danh (chỉ khi bạn đồng ý). Xem Mục 4. Ngoài ra, trình quét mã QR của Google Play services có thể gửi dữ liệu chẩn đoán cho Google (xem Mục 3).
 </li><li><strong>Góp ý và khảo sát do bạn tự gửi:</strong> Hàng <strong>Cài đặt &gt; Góp ý cho MyDay</strong> và thẻ khảo sát một câu trên màn Hôm nay chỉ mở ứng dụng email trên máy của bạn với thư soạn sẵn gửi tới <code>dreammaker3d2026@gmail.com</code>. Thư góp ý điền sẵn phiên bản ứng dụng, đời máy và phiên bản hệ điều hành; thư khảo sát chỉ gồm câu trả lời bạn chọn và phiên bản ứng dụng. Bạn xem, sửa và tự quyết định có bấm gửi hay không; MyDay không tự gửi gì. Khi bạn gửi, chúng tôi nhận được địa chỉ email của bạn và chỉ dùng để đọc, trả lời góp ý, không dùng cho quảng cáo và không chia sẻ cho ai. Ứng dụng chỉ lưu trên máy một cờ "đã trả lời" để không hỏi lại.
 </li><li><strong>Không quảng cáo (No Ads):</strong> MyDay không tích hợp mạng quảng cáo, không chia sẻ dữ liệu người dùng cho bất kỳ nhà quảng cáo hay bên thứ ba nào.
-</li><li><strong>Mạng cục bộ có kiểm soát:</strong> Kết nối mạng (<code>INTERNET</code>) chỉ được sử dụng duy nhất cho tính năng đồng bộ trực tiếp giữa hai thiết bị (P2P Wi-Fi Sync) trên cùng một mạng Wi-Fi cục bộ do chính bạn khởi xướng. Bản thân MyDay không thực hiện kết nối nào ra mạng Internet công cộng. Riêng trình quét mã QR của Google Play services có thể tự gửi dữ liệu chẩn đoán cho Google (xem Mục 3).
+</li><li><strong>Kết nối mạng có kiểm soát:</strong> Kết nối mạng (<code>INTERNET</code>) dùng cho đồng bộ trực tiếp giữa hai máy (P2P Wi-Fi Sync) trên cùng mạng Wi-Fi do bạn khởi xướng, và để gửi báo cáo lỗi, thống kê ẩn danh tới Google Firebase qua HTTPS theo lựa chọn của bạn (Mục 4). Trình quét mã QR của Google Play services cũng có thể tự gửi dữ liệu chẩn đoán cho Google (Mục 3).
 </li></ul>
 <hr>
 <h2>2. Ghép đôi và Đồng bộ giữa hai máy (Pairing &amp; Sync)</h2>
@@ -70,11 +70,25 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 </li><li>Tìm hiểu thêm: <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google ML Kit — Data disclosure</a> và <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.
 </li></ul>
 <hr>
-<h2>4. Quyền hạn ứng dụng yêu cầu và mục đích sử dụng</h2>
+<h2>4. Báo cáo lỗi và thống kê sử dụng (Google Firebase, chỉ trên Android)</h2>
+<p>MyDay dùng hai dịch vụ của Google Firebase. Google xử lý dữ liệu này với vai trò nhà cung cấp dịch vụ cho chúng tôi. Cả hai đều <strong>không bao giờ</strong> nhận tên, ảnh, nội dung kỷ niệm, danh sách khách, số tiền mừng hay số tài khoản ngân hàng. MyDay không thu mã quảng cáo (Advertising ID) và không dùng dữ liệu cho quảng cáo.</p>
+<h3>a. Báo cáo lỗi (Firebase Crashlytics)</h3>
+<ul><li><strong>Khi nào gửi:</strong> khi ứng dụng gặp lỗi hoặc bị đóng đột ngột. Bật sẵn để nhóm phát triển sửa lỗi nhanh; bạn tắt được trong <strong>Cài đặt &gt; Quyền riêng tư &gt; Gửi báo cáo lỗi tự động</strong>.
+</li><li><strong>Nội dung:</strong> vết lỗi kỹ thuật (đoạn mã gây lỗi), hãng và đời máy, phiên bản hệ điều hành và ứng dụng, tình trạng bộ nhớ, thời điểm lỗi, và một mã cài đặt ngẫu nhiên do Firebase tạo (không gắn với danh tính của bạn).
+</li><li><strong>Mục đích:</strong> tìm và sửa lỗi của ứng dụng.
+</li></ul>
+<h3>b. Thống kê sử dụng ẩn danh (Google Analytics for Firebase)</h3>
+<ul><li><strong>Chỉ gửi khi bạn đồng ý:</strong> ứng dụng hỏi một lần trên màn Hôm nay. Bạn đổi lại được lúc nào cũng được trong <strong>Cài đặt &gt; Quyền riêng tư &gt; Gửi thống kê sử dụng ẩn danh</strong>. Khi tắt, MyDay xóa mã thống kê trên máy.
+</li><li><strong>Nội dung:</strong> các lần mở ứng dụng và một số việc bạn làm (lưu kỷ niệm, thêm khách, gửi lời mời, gửi thẻ mốc, tạo sao lưu, lập kế hoạch cưới) kèm tham số kỹ thuật như số ảnh hoặc có kèm mã QR hay không; thông tin thiết bị và phiên bản ứng dụng; quốc gia ước tính từ địa chỉ IP; một mã ứng dụng ngẫu nhiên.
+</li><li><strong>Mục đích:</strong> biết tính năng nào được dùng để cải thiện MyDay. Chúng tôi đã tắt các tùy chọn chia sẻ dữ liệu Analytics với Google cho mục đích khác.
+</li></ul>
+<p>Tìm hiểu thêm: <a href="https://firebase.google.com/support/privacy">Quyền riêng tư và bảo mật của Firebase</a> và <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.</p>
+<hr>
+<h2>5. Quyền hạn ứng dụng yêu cầu và mục đích sử dụng</h2>
 <p>MyDay chỉ yêu cầu các quyền hệ thống tối thiểu cần thiết để cung cấp các tính năng bạn chủ động lựa chọn:</p>
-<h3>a. Kết nối mạng cục bộ (<code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>)</h3>
-<ul><li><strong>Mục đích:</strong> Hỗ trợ tính năng Đồng bộ khi ở cạnh nhau qua mạng Wi-Fi cục bộ (P2P Nearby Sync).
-</li><li><strong>Cam kết an toàn:</strong> Quyền <code>INTERNET</code> chỉ kích hoạt máy chủ HTTP nội bộ nhúng (Ktor) để nhận kết nối từ máy của bạn đời trong cùng mạng Wi-Fi. Ứng dụng không gửi bất kỳ dữ liệu nào ra máy chủ bên ngoài. Quyền <code>ACCESS_NETWORK_STATE</code> chỉ dùng để kiểm tra mạng Wi-Fi và hiển thị địa chỉ IP nội bộ cho mã QR kết nối.
+<h3>a. Kết nối mạng (<code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>)</h3>
+<ul><li><strong>Mục đích:</strong> Hỗ trợ tính năng Đồng bộ khi ở cạnh nhau qua mạng Wi-Fi cục bộ (P2P Nearby Sync), và gửi báo cáo lỗi, thống kê ẩn danh theo Mục 4.
+</li><li><strong>Cam kết an toàn:</strong> Quyền <code>INTERNET</code> kích hoạt máy chủ HTTP nội bộ nhúng (Ktor) để nhận kết nối từ máy của bạn đời trong cùng mạng Wi-Fi. Ngoài báo cáo lỗi và thống kê ở Mục 4, ứng dụng không gửi dữ liệu nào ra máy chủ bên ngoài. Quyền <code>ACCESS_NETWORK_STATE</code> chỉ dùng để kiểm tra mạng Wi-Fi và hiển thị địa chỉ IP nội bộ cho mã QR kết nối.
 </li></ul>
 <h3>b. Đọc danh bạ (<code>READ_CONTACTS</code>) — Chỉ trên Android</h3>
 <ul><li><strong>Mục đích:</strong> Hỗ trợ tính năng "Nhập từ danh bạ" trong màn hình Sổ khách.
@@ -96,21 +110,21 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 </li><li><strong>Cách thức hoạt động:</strong> Xác thực sinh trắc học được xử lý hoàn toàn bởi hệ điều hành thiết bị (<code>BiometricPrompt</code> trên Android, <code>LocalAuthentication</code> trên iOS). Ứng dụng không thu thập, không lưu trữ và không thể truy cập dữ liệu sinh trắc học của bạn.
 </li></ul>
 <hr>
-<h2>5. Sao lưu và Khôi phục dữ liệu</h2>
+<h2>6. Sao lưu và Khôi phục dữ liệu</h2>
 <ul><li><strong>Sao lưu thủ công:</strong> Bạn có toàn quyền xuất bản sao lưu dữ liệu của mình dưới dạng tệp nén (<code>.zip</code>) hoặc tệp <code>.json</code> (chứa cơ sở dữ liệu và hình ảnh). Bạn tự quyết định nơi lưu trữ tệp sao lưu này (bộ nhớ trong máy, thẻ nhớ, gửi qua tin nhắn cho bạn đời hoặc tải lên Google Drive cá nhân).
 </li><li><strong>Tự động sao lưu hệ thống (Android Auto Backup):</strong> Để bảo vệ dữ liệu khi đổi máy, cơ sở dữ liệu văn bản được cấu hình đồng bộ cùng tài khoản Google của bạn theo cơ chế Auto Backup của Android. Để tiết kiệm dung lượng lưu trữ của bạn, tệp ảnh lưu trong thư mục <code>photos/</code> được loại trừ khỏi Auto Backup và chỉ được sao lưu khi bạn xuất tệp zip thủ công.
 </li></ul>
 <hr>
-<h2>6. Quyền kiểm soát và Xóa dữ liệu của người dùng</h2>
+<h2>7. Quyền kiểm soát và Xóa dữ liệu của người dùng</h2>
 <ul><li>Bạn có toàn quyền sửa, xóa bất kỳ mục dữ liệu nào (khách mời, phong bì, mốc kỷ niệm, ảnh) bất cứ lúc nào trong ứng dụng.
 </li><li><strong>Xóa toàn bộ dữ liệu:</strong> Vào <strong>Cài đặt &gt; Bắt đầu lại</strong>, chọn <strong>Xóa toàn bộ kể cả ảnh</strong> rồi gõ "XÓA" để xác nhận. Ứng dụng xóa ngay toàn bộ cơ sở dữ liệu, cài đặt, mã PIN và tệp ảnh trên máy.
 </li><li><strong>Gỡ cài đặt:</strong> Khi bạn gỡ cài đặt MyDay khỏi thiết bị, toàn bộ dữ liệu nằm trong bộ nhớ riêng của ứng dụng sẽ được hệ điều hành xóa hoàn toàn.
 </li></ul>
 <hr>
-<h2>7. Thay đổi đối với Chính sách quyền riêng tư</h2>
+<h2>8. Thay đổi đối với Chính sách quyền riêng tư</h2>
 <p>Chúng tôi có thể cập nhật Chính sách quyền riêng tư này khi phát hành các phiên bản mới bổ sung tính năng. Mọi thay đổi sẽ luôn tuân thủ nguyên tắc tôn trọng quyền riêng tư và dữ liệu cục bộ của người dùng, đồng thời được ghi chú rõ ràng trong mục ghi chú phát hành (Release Notes).</p>
 <hr>
-<h2>8. Liên hệ</h2>
+<h2>9. Liên hệ</h2>
 <p>Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào về chính sách quyền riêng tư của MyDay, vui lòng liên hệ:</p>
 <ul><li><strong>Email:</strong> dreammaker3d2026@gmail.com
 </li><li><strong>Dự án:</strong> MyDay — Sổ tay cưới &amp; Đếm ngày yêu
@@ -120,11 +134,13 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 <p><em>Last updated: November 9, 2026</em></p>
 <p><em>Applicable Version: MyDay 1.0.0+</em></p>
 <p>MyDay ("we", "the app") is a local-first / offline-first mobile app for couples and families (Android &amp; iOS). We are committed to protecting your privacy.</p>
-<ol><li><strong>Local-First Architecture &amp; No Data Collection:</strong>
+<ol><li><strong>Local-First Architecture:</strong>
 <ul><li>All your data (couple profile, love counter, memories, photos, guest list, gift ledger, tasks) is stored locally on your device.
-</li><li>We operate no cloud backends, developer servers, analytics, or tracking SDKs, and show no advertisements. The only exception is the Google Code Scanner (see below).
+</li><li>We operate no servers and show no advertisements. Your names, photos, memories, guest list, gift amounts and bank account numbers never leave your device unless you share or back them up yourself.
+</li><li><strong>Crash reports (Firebase Crashlytics, Android):</strong> on by default, can be turned off in Settings &gt; Quyền riêng tư. Sends the technical crash trace, device model, OS and app version, memory state, time and a random Firebase installation ID, to fix bugs.
+</li><li><strong>Usage statistics (Google Analytics for Firebase, Android):</strong> sent only after you tap "Đồng ý" on the one-time card, and can be turned off anytime (the local analytics ID is then reset). Covers app opens and a few actions (saving a memory, adding a guest, sharing an invitation or milestone card, creating a backup, setting up the wedding) with technical parameters, device and app info, and country derived from IP. No Advertising ID is collected and data is not used for ads.
 </li><li>Feedback and the one-question survey only open your own email app with a prefilled draft to dreammaker3d2026@gmail.com (feedback: app version, device model and OS version; survey: your chosen answer and app version). You review it and decide whether to send. We use your email address only to read and reply to your message.
-</li><li>Network permissions (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>) are strictly used for direct peer-to-peer (P2P) sync between the couple's two devices on the same local Wi-Fi network; no outbound traffic is sent to developer or public servers.
+</li><li>Network permissions (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>) are used for direct peer-to-peer (P2P) sync between the couple's two devices on the same local Wi-Fi network and for the crash reports and usage statistics described above.
 </li></ul>
 </li><li><strong>Pairing &amp; Peer-to-Peer Sync:</strong>
 <ul><li><strong>Pairing Code / QR:</strong> Contains only essential couple profile info (<code>pairId</code>, names, started/wedding dates, special dates). Contains no passwords, PINs, guest lists, or financial data. On Android, QR code scanning is powered directly by Google Play services (Google Code Scanner); camera frames are processed entirely on-device without requiring camera permissions.
@@ -133,7 +149,7 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 </li><li><strong>Nearby Wi-Fi Sync:</strong> Direct P2P connection via embedded local Ktor server over local Wi-Fi or mobile hotspot. Unlike <code>.myday</code> bundles, Wi-Fi sync data is encrypted end-to-end with <strong>AES-256-GCM</strong> using a one-time session token exchanged via QR code.
 </li></ul>
 </li><li><strong>Permissions:</strong>
-<ul><li><strong>Local Network (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Used solely for local Wi-Fi P2P synchronization directly between the two partners.
+<ul><li><strong>Network (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Local Wi-Fi P2P synchronization between the two partners, plus Firebase crash reports and (with consent) usage statistics.
 </li><li><strong>Contacts (<code>READ_CONTACTS</code>):</strong> Used solely when you tap "Import from Contacts" to invite wedding guests. No contacts are uploaded or synced.
 </li><li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Schedules local reminders at 08:00 AM for anniversaries and wedding milestones via local alarms.
 </li><li><strong>Boot Completed (<code>RECEIVE_BOOT_COMPLETED</code>):</strong> Restores local reminders and home screen widgets upon device reboot.

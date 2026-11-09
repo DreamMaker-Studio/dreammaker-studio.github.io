@@ -31,12 +31,12 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 <h1>Chính sách quyền riêng tư — ConceptDive</h1>
 <p><em>Ứng dụng ConceptDive (Android) của DreamMaker Studio · Cập nhật ngày 9/11/2026 · <a href="#en">English</a></em></p>
 
-<p>ConceptDive là ứng dụng học khái niệm kỹ thuật bằng cách nghe, xem sơ đồ và tự kiểm tra. Ứng dụng không yêu cầu tài khoản và nhà phát triển không vận hành máy chủ nào thu nhận dữ liệu của bạn.</p>
+<p>ConceptDive là ứng dụng học khái niệm kỹ thuật bằng cách nghe, xem sơ đồ và tự kiểm tra. Ứng dụng không yêu cầu tài khoản. Từ phiên bản 1.3.0, để sửa lỗi và biết tính năng nào được dùng, ứng dụng gửi báo cáo lỗi và thống kê sử dụng tới Google Firebase, như mô tả ở mục "Báo cáo lỗi và thống kê sử dụng".</p>
 
 <h2>Những gì ứng dụng không làm</h2>
 <ul>
-  <li>Không thu thập thông tin cá nhân, không yêu cầu đăng ký hay đăng nhập.</li>
-  <li>Không có quảng cáo, không có công cụ phân tích hay theo dõi hành vi.</li>
+  <li>Không thu thập tên, email hay thông tin liên lạc, không yêu cầu đăng ký hay đăng nhập.</li>
+  <li>Không có quảng cáo, không dùng mã quảng cáo (Advertising ID), không bán hay chia sẻ dữ liệu cho bên quảng cáo.</li>
   <li>Không gửi bài viết, ghi chú hay tiến độ học của bạn về cho nhà phát triển.</li>
 </ul>
 
@@ -49,12 +49,22 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 </ul>
 
 <h2>Khi nào ứng dụng dùng mạng</h2>
-<p>Ứng dụng chỉ kết nối mạng khi bạn dùng các tính năng sau, và chỉ tới các địa chỉ cần cho tính năng đó:</p>
+<p>Ứng dụng chỉ kết nối mạng trong các trường hợp sau, và chỉ tới các địa chỉ cần cho việc đó:</p>
 <ul>
   <li><strong>Thư viện từ GitHub:</strong> tải danh sách bài, bài viết và ảnh sơ đồ từ repo bạn thêm, qua GitHub (<code>api.github.com</code>, <code>raw.githubusercontent.com</code>) hoặc CDN jsDelivr (<code>cdn.jsdelivr.net</code>) với repo công khai.</li>
   <li><strong>Tải giọng đọc AI:</strong> tải tệp mô hình từ Hugging Face và GitHub khi bạn bấm tải.</li>
   <li><strong>Mở liên kết:</strong> khi bạn bấm "Gửi sang ChatGPT" hoặc một liên kết, ứng dụng mở ứng dụng hoặc trình duyệt tương ứng; nội dung bạn gửi đi do bạn chủ động chia sẻ.</li>
+  <li><strong>Báo cáo lỗi và thống kê sử dụng:</strong> gửi tới Google Firebase, xem mục dưới.</li>
 </ul>
+
+<h2>Báo cáo lỗi và thống kê sử dụng</h2>
+<p>Ứng dụng dùng Firebase Crashlytics và Google Analytics for Firebase của Google. Dữ liệu được gửi qua kết nối mã hoá (HTTPS) và gồm:</p>
+<ul>
+  <li><strong>Báo cáo lỗi:</strong> khi ứng dụng bị lỗi, gửi vết lỗi, thời điểm, phiên bản ứng dụng, hãng và đời máy, phiên bản Android, tình trạng bộ nhớ.</li>
+  <li><strong>Thống kê sử dụng:</strong> các màn hình đã mở, thời lượng dùng, lần mở ứng dụng, phiên bản ứng dụng, ngôn ngữ của máy và quốc gia ước lượng từ địa chỉ IP (Google không lưu địa chỉ IP này).</li>
+  <li><strong>Mã định danh lượt cài đặt:</strong> một mã ngẫu nhiên do Firebase tạo để gộp dữ liệu của cùng một lượt cài đặt. Mã này không phải mã quảng cáo và đổi khi bạn cài lại ứng dụng hoặc xoá dữ liệu ứng dụng.</li>
+</ul>
+<p>Dữ liệu này không kèm tên, email hay nội dung bài, ghi chú của bạn, và chỉ dùng để sửa lỗi và cải thiện ứng dụng, không dùng cho quảng cáo. Ứng dụng đã tắt việc thu mã quảng cáo và các tín hiệu quảng cáo của Analytics. Google xử lý dữ liệu theo <a href="https://firebase.google.com/support/privacy">điều khoản quyền riêng tư của Firebase</a> và lưu theo thời hạn mặc định của dịch vụ.</p>
 
 <h2>Góp ý do bạn tự gửi</h2>
 <p>Nút "Góp ý bài này" ở bài thư viện chỉ mở ứng dụng email trên máy bạn, với thư soạn sẵn gửi tới <code>dreammaker3d2026@gmail.com</code>, điền tên bài, mục đang xem và phiên bản ứng dụng. Bạn xem, sửa và tự quyết định có gửi hay không; ứng dụng không tự gửi gì. Khi bạn gửi, chúng tôi nhận được địa chỉ email của bạn và chỉ dùng để đọc và trả lời góp ý, không dùng cho quảng cáo và không chia sẻ cho ai. Với bài từ nguồn GitHub khác, nút góp ý mở trang tạo issue trên GitHub của nguồn đó.</p>
@@ -72,19 +82,19 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 <p>Ứng dụng không hướng tới trẻ em dưới 13 tuổi.</p>
 
 <h2>Liên hệ</h2>
-<p>Câu hỏi hoặc góp ý về chính sách này: <a href="https://github.com/zitsieunhan1512/ConceptDive-content/issues">mở issue trên GitHub</a>. Bạn cũng có thể gửi email tới <a href="mailto:dreammaker3d2026@gmail.com">dreammaker3d2026@gmail.com</a>.</p>
+<p>Câu hỏi hoặc góp ý về chính sách này: <a href="https://github.com/DreamMaker-Studio/ConceptDive-content/issues">mở issue trên GitHub</a>. Bạn cũng có thể gửi email tới <a href="mailto:dreammaker3d2026@gmail.com">dreammaker3d2026@gmail.com</a>.</p>
 
 <hr>
 
 <h1 id="en">Privacy Policy — ConceptDive</h1>
 <p><em>ConceptDive for Android by DreamMaker Studio · Updated November 9, 2026</em></p>
 
-<p>ConceptDive is an app for learning technical concepts by listening, viewing diagrams and testing yourself. It requires no account, and the developer runs no server that receives your data.</p>
+<p>ConceptDive is an app for learning technical concepts by listening, viewing diagrams and testing yourself. It requires no account. Starting with version 1.3.0, to fix bugs and learn which features are used, the app sends crash reports and usage statistics to Google Firebase, as described under "Crash reports and usage statistics".</p>
 
 <h2>What the app does not do</h2>
 <ul>
-  <li>It does not collect personal information and never asks you to sign up or sign in.</li>
-  <li>It has no ads and no analytics or behavior tracking.</li>
+  <li>It does not collect your name, email or contact details, and never asks you to sign up or sign in.</li>
+  <li>It has no ads, does not use the Advertising ID, and does not sell or share data with advertisers.</li>
   <li>It does not send your articles, notes or learning progress to the developer.</li>
 </ul>
 
@@ -97,12 +107,22 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 </ul>
 
 <h2>When the app uses the network</h2>
-<p>The app connects to the network only when you use the features below, and only to the addresses those features need:</p>
+<p>The app connects to the network only in the cases below, and only to the addresses they need:</p>
 <ul>
   <li><strong>GitHub libraries:</strong> downloads the article list, articles and diagram images from repositories you add, through GitHub (<code>api.github.com</code>, <code>raw.githubusercontent.com</code>) or, for public repositories, the jsDelivr CDN (<code>cdn.jsdelivr.net</code>).</li>
   <li><strong>AI voice downloads:</strong> downloads model files from Hugging Face and GitHub when you tap download.</li>
   <li><strong>Opening links:</strong> when you tap "Send to ChatGPT" or a link, the app opens the matching app or browser; anything you send there is shared by you.</li>
+  <li><strong>Crash reports and usage statistics:</strong> sent to Google Firebase, see below.</li>
 </ul>
+
+<h2>Crash reports and usage statistics</h2>
+<p>The app uses Google's Firebase Crashlytics and Google Analytics for Firebase. Data is sent over an encrypted connection (HTTPS) and includes:</p>
+<ul>
+  <li><strong>Crash reports:</strong> when the app crashes, the stack trace, time, app version, device manufacturer and model, Android version and memory state.</li>
+  <li><strong>Usage statistics:</strong> screens opened, time spent, app opens, app version, device language and the country estimated from the IP address (Google does not store the IP address).</li>
+  <li><strong>Installation identifier:</strong> a random ID created by Firebase to group data from the same installation. It is not an advertising ID and changes when you reinstall the app or clear its data.</li>
+</ul>
+<p>This data does not include your name, email, articles or notes. It is used only to fix bugs and improve the app, never for advertising. The app turns off Advertising ID collection and Analytics advertising signals. Google processes the data under the <a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a> and keeps it for the services' default retention periods.</p>
 
 <h2>Feedback you send yourself</h2>
 <p>"Feedback on this article" on library articles only opens the email app on your device with a draft addressed to <code>dreammaker3d2026@gmail.com</code>, prefilled with the article title, the section you are reading and the app version. You review, edit and decide whether to send it; the app sends nothing by itself. If you send it, we receive your email address and use it only to read and reply to your feedback, never for advertising, and we do not share it. For articles from other GitHub sources, the feedback button opens that source's GitHub issue page.</p>
@@ -120,7 +140,7 @@ footer { margin-top: 3em; color: var(--muted); font-size: 0.9em; }
 <p>The app is not directed at children under 13.</p>
 
 <h2>Contact</h2>
-<p>Questions or feedback about this policy: <a href="https://github.com/zitsieunhan1512/ConceptDive-content/issues">open an issue on GitHub</a>. You can also email <a href="mailto:dreammaker3d2026@gmail.com">dreammaker3d2026@gmail.com</a>.</p>
+<p>Questions or feedback about this policy: <a href="https://github.com/DreamMaker-Studio/ConceptDive-content/issues">open an issue on GitHub</a>. You can also email <a href="mailto:dreammaker3d2026@gmail.com">dreammaker3d2026@gmail.com</a>.</p>
 <footer>DreamMaker Studio · <a href="../../">Các ứng dụng khác</a></footer>
 </main>
 </body>

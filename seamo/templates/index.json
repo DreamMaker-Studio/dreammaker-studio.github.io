@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "holiday-2026",
+      "name": "Holiday 2026",
+      "version": 1,
+      "url": "packs/holiday-2026-1.zip",
+      "sha256": "501e160a16163114b8484fc53df3b2189e69e982113d5b849bf4f43b166a5dc5",
+      "sizeBytes": 936487,
+      "minAppVersion": 1,
+      "isPro": false,
+      "publishedAt": "2026-11-15"
+    }
+  ],
+  "retired": []
+}

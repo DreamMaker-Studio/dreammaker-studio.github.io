@@ -11,6 +11,17 @@
       "minAppVersion": 1,
       "isPro": false,
       "publishedAt": "2026-11-15"
+    },
+    {
+      "id": "valentine-2027",
+      "name": "Valentine 2027",
+      "version": 2,
+      "url": "packs/valentine-2027-2.zip",
+      "sha256": "fbfded7638f696d09637425179d788b1b6a75c4a6b4ea5ba5dbe48a44bd3da45",
+      "sizeBytes": 1124620,
+      "minAppVersion": 1,
+      "isPro": false,
+      "publishedAt": "2026-11-16"
     }
   ],
   "retired": []

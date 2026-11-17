@@ -22,6 +22,61 @@
       "minAppVersion": 1,
       "isPro": false,
       "publishedAt": "2026-11-14"
+    },
+    {
+      "id": "pets-memes-2027",
+      "name": "Pets & Memes",
+      "version": 1,
+      "url": "packs/pets-memes-2027-1.zip",
+      "sha256": "f3cd4ff53fe686a76d9e0f3577a0af8e98bd3c05e721e921108e988d2dc8eee8",
+      "sizeBytes": 543328,
+      "minAppVersion": 5,
+      "isPro": false,
+      "publishedAt": "2026-11-13"
+    },
+    {
+      "id": "decor-basics-2027",
+      "name": "Decor Basics",
+      "version": 1,
+      "url": "packs/decor-basics-2027-1.zip",
+      "sha256": "f4e9363db2cc376f77da07d2ba80e6d8ce639c83f957d308a85c71f888aa7c0e",
+      "sizeBytes": 1705792,
+      "minAppVersion": 5,
+      "isPro": false,
+      "publishedAt": "2026-11-17"
+    },
+    {
+      "id": "doodle-stickers-1",
+      "name": "Doodle Stickers",
+      "version": 1,
+      "url": "packs/doodle-stickers-1-1.zip",
+      "sha256": "cdd50419f27aef4df32401f5e2dbc66164bd7009dca0b596e16d088d6b82681e",
+      "sizeBytes": 1079478,
+      "minAppVersion": 5,
+      "isPro": false,
+      "publishedAt": "2026-11-17"
+    },
+    {
+      "id": "emoji-stickers-1",
+      "name": "Fluent Emoji Stickers",
+      "version": 1,
+      "url": "packs/emoji-stickers-1-1.zip",
+      "sha256": "91085393ea5beb7a0a6b6e8b3624ee3c7e2aeb497f395f8b09981f931b087e03",
+      "sizeBytes": 1319454,
+      "minAppVersion": 5,
+      "isPro": false,
+      "publishedAt": "2026-11-17"
+    },
+    {
+      "id": "paper-textures-1",
+      "name": "Paper & Fabric Textures",
+      "version": 1,
+      "url": "packs/paper-textures-1-1.zip",
+      "sha256": "eafa023638f8de526ac12ea6db58c8eec42d517455f0356cfea8114c245b8e19",
+      "sizeBytes": 1848013,
+      "minAppVersion": 5,
+      "isPro": false,
+      "publishedAt": "2026-11-17"
     }
   ],
   "retired": []

@@ -77,6 +77,72 @@
       "minAppVersion": 5,
       "isPro": false,
       "publishedAt": "2026-11-17"
+    },
+    {
+      "id": "scrapbook-dump-1",
+      "name": "Scrapbook dump",
+      "version": 1,
+      "url": "packs/scrapbook-dump-1-1.zip",
+      "sha256": "889ca4a9d638a6bf4e6038432a904baae684143e51c4761ed708a76d7f9e74f9",
+      "sizeBytes": 3182282,
+      "minAppVersion": 12,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "digicam-night-1",
+      "name": "Digicam night",
+      "version": 1,
+      "url": "packs/digicam-night-1-1.zip",
+      "sha256": "7b13c6b39ef91bff32e583bce24b914ba349b5494cc5f5e75aa58772875a3dde",
+      "sizeBytes": 1758369,
+      "minAppVersion": 12,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "notes-texts-1",
+      "name": "Notes & Texts",
+      "version": 1,
+      "url": "packs/notes-texts-1-1.zip",
+      "sha256": "68f2a46b59e77c348d58e224f0254143299b08ee7a1bc4035e38b26d5767a9cf",
+      "sizeBytes": 1398833,
+      "minAppVersion": 12,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "zine-bold-1",
+      "name": "Zine bold",
+      "version": 1,
+      "url": "packs/zine-bold-1-1.zip",
+      "sha256": "640f0407c36bcecd66cfb25645e16ec0f87fbd3cc21d7f1c8f40641dfb4bb51f",
+      "sizeBytes": 4217458,
+      "minAppVersion": 12,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "sticker-bomb-1",
+      "name": "Sticker Bomb",
+      "version": 1,
+      "url": "packs/sticker-bomb-1-1.zip",
+      "sha256": "6dca91ea4583b03d4233fc31752f123828943e5974b0a496ee4b6d8490d1ef37",
+      "sizeBytes": 2374419,
+      "minAppVersion": 12,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "bao-hy-1",
+      "name": "B\u00e1o h\u1ef7",
+      "version": 1,
+      "url": "packs/bao-hy-1-1.zip",
+      "sha256": "d9a41f59c13a4082c76ced8999e542eec8d934dd2ebde4855f7c72f6d85f271e",
+      "sizeBytes": 2358165,
+      "minAppVersion": 12,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
     }
   ],
   "retired": []

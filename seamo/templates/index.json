@@ -136,11 +136,11 @@
     {
       "id": "bao-hy-1",
       "name": "B\u00e1o h\u1ef7",
-      "version": 2,
-      "url": "packs/bao-hy-1-2.zip",
-      "sha256": "4ec0b4b44fc4a45e9535864b8a59c8ba671b1b5ff5cb90198512dfd00d7a37ec",
-      "sizeBytes": 2358349,
-      "minAppVersion": 12,
+      "version": 4,
+      "url": "packs/bao-hy-1-4.zip",
+      "sha256": "187ad99cc83d6bfa7bf0decacf3d4c09dbe5717910f48b7db0ee8be74f639e39",
+      "sizeBytes": 2312763,
+      "minAppVersion": 13,
       "isPro": false,
       "publishedAt": "2026-11-19"
     }

@@ -24,17 +24,6 @@
       "publishedAt": "2026-11-14"
     },
     {
-      "id": "pets-memes-2027",
-      "name": "Pets & Memes",
-      "version": 1,
-      "url": "packs/pets-memes-2027-1.zip",
-      "sha256": "f3cd4ff53fe686a76d9e0f3577a0af8e98bd3c05e721e921108e988d2dc8eee8",
-      "sizeBytes": 543328,
-      "minAppVersion": 5,
-      "isPro": false,
-      "publishedAt": "2026-11-13"
-    },
-    {
       "id": "decor-basics-2027",
       "name": "Decor Basics",
       "version": 1,
@@ -79,39 +68,6 @@
       "publishedAt": "2026-11-17"
     },
     {
-      "id": "scrapbook-dump-1",
-      "name": "Scrapbook dump",
-      "version": 1,
-      "url": "packs/scrapbook-dump-1-1.zip",
-      "sha256": "889ca4a9d638a6bf4e6038432a904baae684143e51c4761ed708a76d7f9e74f9",
-      "sizeBytes": 3182282,
-      "minAppVersion": 12,
-      "isPro": false,
-      "publishedAt": "2026-11-19"
-    },
-    {
-      "id": "digicam-night-1",
-      "name": "Digicam night",
-      "version": 1,
-      "url": "packs/digicam-night-1-1.zip",
-      "sha256": "7b13c6b39ef91bff32e583bce24b914ba349b5494cc5f5e75aa58772875a3dde",
-      "sizeBytes": 1758369,
-      "minAppVersion": 12,
-      "isPro": false,
-      "publishedAt": "2026-11-19"
-    },
-    {
-      "id": "notes-texts-1",
-      "name": "Notes & Texts",
-      "version": 1,
-      "url": "packs/notes-texts-1-1.zip",
-      "sha256": "68f2a46b59e77c348d58e224f0254143299b08ee7a1bc4035e38b26d5767a9cf",
-      "sizeBytes": 1398833,
-      "minAppVersion": 12,
-      "isPro": false,
-      "publishedAt": "2026-11-19"
-    },
-    {
       "id": "zine-bold-1",
       "name": "Zine bold",
       "version": 1,
@@ -134,12 +90,56 @@
       "publishedAt": "2026-11-19"
     },
     {
+      "id": "scrapbook-dump-1",
+      "name": "Scrapbook dump",
+      "version": 2,
+      "url": "packs/scrapbook-dump-1-2.zip",
+      "sha256": "8e7dc78164273c6090c0a538eb05814140a7e5350c9c88e0be97bb98a5b4aa1b",
+      "sizeBytes": 3214884,
+      "minAppVersion": 13,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "notes-texts-1",
+      "name": "Notes & Texts",
+      "version": 2,
+      "url": "packs/notes-texts-1-2.zip",
+      "sha256": "59ec9d9f1adfb36d7ba2daf4bb54037ee0c8f07fb41d856926255176355ccdd1",
+      "sizeBytes": 1406049,
+      "minAppVersion": 13,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "digicam-night-1",
+      "name": "Digicam night",
+      "version": 2,
+      "url": "packs/digicam-night-1-2.zip",
+      "sha256": "c49a1e131f1325bdf068b56816d2e1699551b54dac17bb67e1cc9768636a73c5",
+      "sizeBytes": 1761979,
+      "minAppVersion": 13,
+      "isPro": false,
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "id": "pets-memes-2027",
+      "name": "Pets & Memes",
+      "version": 2,
+      "url": "packs/pets-memes-2027-2.zip",
+      "sha256": "42163ccd93b40f0c1a4a0bfc649acca81875a5395434872c7f587914468eb06e",
+      "sizeBytes": 746849,
+      "minAppVersion": 13,
+      "isPro": false,
+      "publishedAt": "2026-11-17"
+    },
+    {
       "id": "bao-hy-1",
       "name": "B\u00e1o h\u1ef7",
-      "version": 1,
-      "url": "packs/bao-hy-1-1.zip",
-      "sha256": "d9a41f59c13a4082c76ced8999e542eec8d934dd2ebde4855f7c72f6d85f271e",
-      "sizeBytes": 2358165,
+      "version": 2,
+      "url": "packs/bao-hy-1-2.zip",
+      "sha256": "4ec0b4b44fc4a45e9535864b8a59c8ba671b1b5ff5cb90198512dfd00d7a37ec",
+      "sizeBytes": 2358349,
       "minAppVersion": 12,
       "isPro": false,
       "publishedAt": "2026-11-19"
